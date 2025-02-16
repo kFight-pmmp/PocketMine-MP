@@ -361,8 +361,7 @@ class Player extends Human implements CommandSender, ChunkListener, IPlayer{
 		$event = new PlayerItemHeldEvent($this, $this->inventory->getItem($slot), $slot);
 		$event->call();
 		//TODO: this event is actually cancellable, but cancelling it here has no meaningful result, so we
-		//just ignore it. We fire this only because the content of the held slot changed, not because the
-		//held slot index changed. We can't prevent that from here, and nor would it be sensible to.
+
 	}
 
 	protected function initEntity(CompoundTag $nbt) : void{
